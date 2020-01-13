@@ -1,11 +1,13 @@
 Flask
 Flask-RESTful
 Flask-Bootstrap
+googleapiclient
+googleauth
 gspread
 gunicorn
 itsdangerous
 Jinja2
-oauth2client
+oauthlib
 peewee
 Werkzeug
 WTForms
