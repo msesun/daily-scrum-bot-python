@@ -1,4 +1,4 @@
-import gspread, pickle, os
+import gspread, pickle, os, json
 # from oauth2client.service_account import ServiceAccountCredentials
 from datetime import date
 from requests_oauthlib import OAuth2Session
@@ -25,7 +25,9 @@ def get_daily_scrum_lucky_winner():
   # Make sure you use the right name here.
   # sheet = client.open('Copy of Demo & Scrum Schedule').worksheet('Daily Scrum')
 
-  creds = None
+  creds = json.loads(os.environ.get('GOOGLE_CREDENTIALS'))
+  with open('client_creds.json', 'w') as file:
+    json.dump(creds, file)
   if os.path.exists('token.pickle'):
       with open('token.pickle', 'rb') as token:
           creds = pickle.load(token)
@@ -34,7 +36,7 @@ def get_daily_scrum_lucky_winner():
           creds.refresh(Request())
       else:
           flow = InstalledAppFlow.from_client_secrets_file(
-              os.environ.get('GOOGLE_CREDENTIALS'), scope)
+              os.environ.get('client_creds.json'), scope)
           creds = flow.run_local_server(port=0)
       with open('token.pickle', 'wb') as token:
           pickle.dump(creds, token)
