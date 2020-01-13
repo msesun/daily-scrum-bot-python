@@ -1,8 +1,10 @@
 Flask
 Flask-RESTful
 Flask-Bootstrap
+gspread
 gunicorn
 itsdangerous
 Jinja2
+oauth2client
 peewee
 Werkzeug
