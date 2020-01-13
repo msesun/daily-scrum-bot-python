@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2>Users for F1 Team:</h2>
+    <ul class="list-group">
+      {% for user in users %}
+        <li class="list-group-item">{{user}}</li>
+      {% endfor %}
+    </ul>
+    <button type="button" class="btn btn-outline-info btn-lg">Add new user</button>
+    <button type="button" class="btn btn-outline-info btn-lg" disabled>Delete user</button>
+
+    {% if add_user %}
+      <
+    {% endif %}
+  </div>
+{% endblock %}
