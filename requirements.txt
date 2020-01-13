@@ -1,8 +1,9 @@
 Flask
 Flask-RESTful
 Flask-Bootstrap
-googleapiclient
-googleauth
+google-api-python-client
+google-auth
+google-auth-oauthlib
 gspread
 gunicorn
 itsdangerous
