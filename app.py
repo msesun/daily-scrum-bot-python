@@ -1,9 +1,9 @@
 from flask import Flask, render_template, redirect
 from flask_bootstrap import Bootstrap
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 from util.forms import AddUserForm
 from util import google_util
+from datetime import date
 
 
 F1_USERS = ['alan', 'dave', 'dilip', 'ellen', 'jeff', 'landon', 'matt', 'prem', 'senai', 'seth', 'xavier']

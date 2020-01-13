@@ -8,3 +8,4 @@ Jinja2
 oauth2client
 peewee
 Werkzeug
+WTForms
