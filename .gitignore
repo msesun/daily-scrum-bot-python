@@ -3,3 +3,4 @@ static/.DS_Store
 __pycache__
 client_secrets.json
 daily-scrum-bot-*
+envs
