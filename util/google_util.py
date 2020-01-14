@@ -48,7 +48,7 @@ def get_daily_scrum_lucky_winner():
           return row[1]
 
 
-if __name__ == '__main__':
-  todays_user = get_daily_scrum_lucky_winner()
-  print(todays_user)
+# if __name__ == '__main__':
+#   todays_user = get_daily_scrum_lucky_winner()
+#   print(todays_user)
 
