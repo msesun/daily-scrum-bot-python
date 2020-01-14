@@ -15,9 +15,9 @@ def get_daily_scrum_lucky_winner():
   ]
 
   creds = None
-  # google_credentials = json.loads(os.environ.get('GOOGLE_CREDENTIALS'))
-  # with open('client_creds.json', 'w') as file:
-  #   json.dump(google_credentials, file)
+  google_credentials = json.loads(os.environ.get('GOOGLE_CREDENTIALS'))
+  with open('client_creds.json', 'w') as file:
+    json.dump(google_credentials, file)
   if os.path.exists('token.pickle'):
     with open('token.pickle', 'rb') as token:
       creds = pickle.load(token)
@@ -50,4 +50,5 @@ def get_daily_scrum_lucky_winner():
 
 # if __name__ == '__main__':
 #   todays_user = get_daily_scrum_lucky_winner()
+#   print(todays_user)
 
