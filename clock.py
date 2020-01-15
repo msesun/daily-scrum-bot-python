@@ -2,7 +2,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from util import google_util, slack_util
 from datetime import date
 
-sched = BlockingScheduler()
+sched = BlockingScheduler(timezone="America/New_York")
 
 # @sched.scheduled_job('interval', minutes=3)
 # def timed_job():
