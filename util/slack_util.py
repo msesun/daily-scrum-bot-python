@@ -3,6 +3,7 @@ import os
 from datetime import date
 import util.google_util as google_util
 
+
 def slack_message(message, channel, username, icon):
     token = os.environ.get('SLACK_API_TOKEN')
     client = WebClient(token)

@@ -34,8 +34,9 @@ def get_daily_scrum_lucky_winner():
 
   # Call the Sheets API
   sheet = service.spreadsheets()
-  result = sheet.values().get(spreadsheetId=spreadsheet_id,
-                              range=spreadsheet_range).execute()
+  result = sheet.values().get(
+    spreadsheetId=spreadsheet_id,
+    range=spreadsheet_range).execute()
   values = result.get('values', [])
 
   if not values:

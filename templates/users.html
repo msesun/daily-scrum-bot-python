@@ -1,18 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="container">
-    <h2>Users for F1 Team:</h2>
-    <ul class="list-group">
-      {% for user in users %}
-        <li class="list-group-item">{{user}}</li>
-      {% endfor %}
-    </ul>
-    <button type="button" class="btn btn-outline-info btn-lg">Add new user</button>
-    <button type="button" class="btn btn-outline-info btn-lg" disabled>Delete user</button>
-
-    {% if add_user %}
-      <
-    {% endif %}
+  <div id="accordion">
+    {% for team, users in teams_and_users.items() %}
+      <div class="card">
+        <div class="card-header" id="{{'heading' + loop.index|string}}">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="{{'#collapse' + loop.index|string}}" aria-expanded="true" aria-controls="{{'collapse' + loop.index|string}}">
+              {{team}}
+            </button>
+          </h5>
+        </div>
+        <div id="{{'collapse' + loop.index|string}}" class="collapse" aria-labelledby="{{'heading' + loop.index|string}}" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="list-group">
+              {% for user in users %}
+                <li class="list-group-item">{{user}}</li>
+              {% endfor %}
+            </ul>
+            <a href="/users/add?team_name={{team}}" role="button" class="btn btn-info btn-lg">Add new user</a>
+            <button type="button" class="btn btn-info btn-lg" disabled>Delete user</button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 {% endblock %}

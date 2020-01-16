@@ -1,4 +1,5 @@
-from wtforms import Form, BooleanField, StringField, validators
+from wtforms import Form, HiddenField, StringField, validators
 
 class AddUserForm(Form):
-    name = StringField('Name', [validators.InputRequired()])
+    name = StringField('New Member\'s Name', [validators.InputRequired()])
+    team = HiddenField('Team')

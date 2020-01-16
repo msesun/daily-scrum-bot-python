@@ -22,8 +22,7 @@ pip3 install -r requirements.txt
 ```
 Start application:
 ```
-export FLASK_APP=app.py
-flask run
+FLASK_APP=app.py FLASK_ENV=development flask run
 ```
 ---
 *Using [https://github.com/Vetronus/heroku-flask-template](https://github.com/Vetronus/heroku-flask-template) as a starting point*
