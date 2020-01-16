@@ -1,5 +1,4 @@
 .DS_Store
-static/.DS_Store
 __pycache__/
 client_secret.json
 client_credentials.json
