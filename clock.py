@@ -15,8 +15,8 @@ sched = BlockingScheduler(timezone="America/New_York")
 def scheduled_job():
   lucky_winner = google_util.get_daily_scrum_lucky_winner()
   today = date.today().strftime("%b %-d, %Y")
-  slack_util.slack_message(f'_{today}_ - *{lucky_winner}*, you are today\'s lucky winner!', '#test-zapier', 'Daily Scrum Bot', ':alarm_clock:')
-  slack_util.slack_message(f'_{today}_ - *{lucky_winner}*, you are today\'s lucky winner!', '#drc-f1-app-team', 'Daily Scrum Bot', ':alarm_clock:')
+  slack_util.slack_message(f'<!here> _{today}_ - *{lucky_winner}*, you are today\'s lucky winner!', '#test-zapier', 'Daily Scrum Bot', ':alarm_clock:')
+  slack_util.slack_message(f'<!here> _{today}_ - *{lucky_winner}*, you are today\'s lucky winner!', '#drc-f1-app-team', 'Daily Scrum Bot', ':alarm_clock:')
   print('This job is run every weekday at 10am.')
 
 

@@ -1,7 +1,7 @@
 from slack import WebClient
 import os
 from datetime import date
-import util.google_util as google_util
+import google_util
 
 
 def slack_message(message, channel, username, icon):
@@ -13,4 +13,5 @@ def slack_message(message, channel, username, icon):
 # if __name__ == '__main__':
 #   today = date.today().strftime("%b %-d, %Y")
 #   user = google_util.get_daily_scrum_lucky_winner()
-#   slack_message(f'_{today}_ - *{user}*, you are today\'s lucky winner!', '#test-zapier', 'Daily Scrum Bot', ':alarm_clock:')
+#   slack_message(f'<!here> _{today}_ - *{user}*, you are today\'s lucky winner!', '#test-zapier', 'Daily Scrum Bot', ':alarm_clock:')
+

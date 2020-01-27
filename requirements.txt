@@ -11,6 +11,7 @@ itsdangerous
 Jinja2
 oauthlib
 peewee
+psycopg2-binary
 slackclient
 Werkzeug
 WTForms
