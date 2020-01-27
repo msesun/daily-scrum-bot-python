@@ -1,7 +1,7 @@
 from slack import WebClient
 import os
 from datetime import date
-import google_util
+from util import google_util
 
 
 def slack_message(message, channel, username, icon):
