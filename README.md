@@ -2,7 +2,7 @@
 ### A simple application to randomize daily scrum presenter.
 ### Currently pulls data from a Google Sheets
 ---
-- Uses Python 3.6.10
+- Uses Python 3.10.7
 - Deployed to Heroku [https://daily-scrum-bot.herokuapp.com/](https://daily-scrum-bot.herokuapp.com/)
 - Uses Flask for UI
 - Uses Google API to grab Google Sheets data
