@@ -1,3 +1,6 @@
+**UPDATE Dec 8, 2022** Heroku has stopped their free tiers and free dynos so archiving this repo and converting to use Typescript and Jenkins instead
+
+---
 # Daily Scrum Bot
 ### A simple application to randomize daily scrum presenter.
 ### Currently pulls data from a Google Sheets
